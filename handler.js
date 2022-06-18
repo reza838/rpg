@@ -289,10 +289,10 @@ module.exports = {
                     expired: 0,
                     antiBadword: true,
                     antispam: true,
-                    antitroli: false,
-                    antivirtex: false,
+                    antitroli: true,
+                    antivirtex: true,
                     viewonce: true,
-                    nsfw: false,
+                    nsfw: true,
                     simi: false,
                     clear: false,
                     clearTime: 0
