@@ -25,7 +25,6 @@ const defaultMenu = {
   body: '├ %cmd %islimit %isPremium',
   footer: '└────\n',
   after: `
-*%npmname@^%version*
 ${'```%npmdesc```'}
 `,
 }
@@ -274,7 +273,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
       readmore: readMore
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
-    await conn.send3TemplateButtonImg(m.chat, fla + teks, text.trim(), wm, `🏅Owner`, `${_p}owner`, `🎖ThanksTo`, `${_p}tqto`, `🎗  Donasi  🎗`, `${_p}infobot`)
+    await conn.send3TemplateButtonImg(m.chat, fla + teks, text.trim(), wm, `🏅Owner`, `${_p}owner`, `🎗  Donasi  🎗`, `${_p}infobot`)
   } catch (e) {
     conn.reply(m.chat, 'Maaf, menu sedang error', m)
     throw e
