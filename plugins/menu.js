@@ -21,8 +21,8 @@ const defaultMenu = {
 ├ Database: %rtotalreg dari %totalreg
 └────
 %readmore`.trim(),
-  header: '   〔 %category 〕',
-  body: '🍁 *%cmd %islimit %isPremium*',
+  header: '   〔 *%category* 〕',
+  body: '🍁 _%cmd %islimit %isPremium_',
   footer: '\n',
   after: `
 ${'```%npmdesc```'}
@@ -188,6 +188,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
       {
         title: 'List Menu ' + namabot,
         rows: [
+          { title: 'Jangan Spam!' },
           { title: 'Semua Perintah', rowId: `${_p}? all` },
           { title: 'Game', rowId: `${_p}? game` },
           { title: 'XP', rowId: `${_p}? xp` },
